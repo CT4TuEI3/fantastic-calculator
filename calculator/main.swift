@@ -46,7 +46,3 @@ if let firstNumber = Int(firstNumber) {
 } else {
     print("Вы ввели неверное первое число")
 }
-
-
-
-
