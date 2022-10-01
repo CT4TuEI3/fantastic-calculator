@@ -9,15 +9,9 @@
 
 print("Добро пожаловать в калькулятор")
 
-print("Выберите операцию: +, -, * или /")
-var operation = readLine() ?? ""
-
-print("Введите первое число")
-let firstNumber = readLine() ?? ""
-
-
-print("Введите второе числов")
-let secondNumber = readLine() ?? ""
+let operation = getDataFromUser(description: "Выберите операцию: +, -, * или /")
+let firstNumber = getDataFromUser(description: "Введите первое число")
+let secondNumber = getDataFromUser(description: "Введите второе числов")
 
 print("Идёт вычисление: " + firstNumber + " " + operation + " " + secondNumber)
 let result = "Результат вычисления: "
@@ -45,4 +39,9 @@ if let firstNumber = Int(firstNumber) {
     }
 } else {
     print("Вы ввели неверное первое число")
+}
+
+func getDataFromUser(description: String) -> {
+    print(description)
+    return readLine() ?? ""
 }
