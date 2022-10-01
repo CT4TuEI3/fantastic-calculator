@@ -26,7 +26,6 @@ if let firstNumber = Int(firstNumber) {
 }
 
 func getDataFromUser(description: String) -> String {
-    print(description)
     return readLine() ?? ""
 }
 
@@ -39,8 +38,11 @@ func showResult(_ result: Int) {
 func calculate(operation: String, firstNumber: Int, secondNumber: Int) {
     switch operation {
     case "+": showResult(firstNumber + secondNumber)
+        
     case "-": showResult(firstNumber - secondNumber)
+        
     case "*": showResult(firstNumber * secondNumber)
+        
     case "/": secondNumber != 0 ? showResult(firstNumber / secondNumber) : print("На 0 делить нельзя!")
         
     default: print("Вы ввели неверную операцию")
