@@ -9,14 +9,14 @@ import Darwin
 
 print("Добро пожаловать в калькулятор")
 
-var history: [String] = []
+var historyOfCalculation: [String] = []
 
 while true {
     let operation = getDataFromUser(description: "Выберите операцию: +, -, * или /. Для завершения работы введите q. Для просмотра истории введите h")
     if operation == "q" {
         exit(0)
     } else if operation == "h" {
-        for example in history {
+        for example in historyOfCalculation{
             print(example)
         }
         continue
@@ -33,10 +33,9 @@ while true {
             let result = calculate(operation: operation, firstNumber: firstNumber, secondNumber: secondNumber)
             if let result = result {
                 showResult(result)
-                history.append(example + " = " + String(result))
+                historyOfCalculation.append(example + " = " + String(result))
             }
         }
-        
     } else {
         print("Вы ввели неверное первое число")
     }
