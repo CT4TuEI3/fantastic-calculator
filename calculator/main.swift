@@ -1,3 +1,9 @@
+//
+//  main.swift
+//  calculator
+//
+//  Created by Алексей on 16.09.2022.
+
 import Darwin
 
 print("Добро пожаловать в калькулятор")
